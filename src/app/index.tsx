@@ -1,12 +1,8 @@
+import { Redirect } from "expo-router";
 import React from "react";
-import { Text, View } from "react-native";
 
-const Index = () => {
-  return (
-    <View>
-      <Text>Hello World</Text>
-    </View>
-  );
+const index = () => {
+  return <Redirect href={"webview/Index"} />;
 };
 
-export default Index;
+export default index;
