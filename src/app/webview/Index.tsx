@@ -3,7 +3,7 @@ import { Platform, StatusBar, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import WebView from "react-native-webview";
 
-const Test = () => {
+const WebViewScreen = () => {
   return (
     <>
       <SafeAreaView style={styles.root}>
@@ -26,4 +26,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Test;
+export default WebViewScreen;

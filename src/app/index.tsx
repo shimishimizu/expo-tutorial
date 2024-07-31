@@ -1,10 +1,3 @@
-// import { AppRegistry } from "react-native";
-// // import App from './App';
-// import { expo } from "../../app.json";
-// import Layout from "./_layout";
-
-// AppRegistry.registerComponent(expo.name, () => Layout);
-
 import React from "react";
 import { Slot } from "expo-router";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -16,24 +9,28 @@ import PlatinumSchoolScreen from "./PlatinumSchool";
 import HomeScreen from "./Home";
 import TrainingScreen from "./Training";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { Box } from "../components/ui/box";
+import { GluestackUIProvider } from "../components/ui/gluestack-ui-provider";
+import "../../global.css";
+import WebViewScreen from "./webview/Index";
 
 const Tab = createBottomTabNavigator();
 
 const App = () => {
   return (
-    <>
+    <GluestackUIProvider>
       {/* <SafeAreaView style={styles.root}> */}
       <StatusBar barStyle="dark-content" />
-      <Text>toppppp</Text>
       <Tab.Navigator>
         <Tab.Screen name="ホーム" component={HomeScreen} />
         <Tab.Screen name="トレーニング" component={TrainingScreen} />
         <Tab.Screen name="教材" component={PlatinumSchoolScreen} />
         <Tab.Screen name="EC MOBILE" component={EcMobileScreen} />
         <Tab.Screen name="マイページ" component={MypageScreen} />
+        <Tab.Screen name="WebView" component={WebViewScreen} />
       </Tab.Navigator>
       {/* </SafeAreaView> */}
-    </>
+    </GluestackUIProvider>
   );
 };
 
