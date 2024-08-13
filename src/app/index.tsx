@@ -20,6 +20,7 @@ const App = () => {
   return (
     <GluestackUIProvider>
       {/* <SafeAreaView style={styles.root}> */}
+
       <StatusBar barStyle="dark-content" />
       <Tab.Navigator>
         <Tab.Screen name="ホーム" component={HomeScreen} />
